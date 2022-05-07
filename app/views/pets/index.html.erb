@@ -1,0 +1,12 @@
+<div class="mx-auto" style="width: 600px;">
+
+<h1>All pets</h1>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li><%= pet.name %> - Found <%= (Date.today - pet.found_on).to_i  %> days ago</li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a pet", pets_new_path, :class => "btn btn-primary" %>
+</div>
